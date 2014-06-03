@@ -12,4 +12,5 @@ Requirements
 1. Python
 2. ElasticSearch
 3. python-elasticsearch-client
+4. python requests
 
