@@ -1,19 +1,20 @@
-from elasticsearch import Elasticsearch
 import json
 
-es = Elasticsearch()
+def query(es):
 
-doc = {
-	"query": {
-		"query_string": {
-			"query": "github fuck readme tutorial"
+	tags = raw_input("Enter tags to be searched [space separated]: ")
+	doc = {
+		"query": {
+			"query_string": {
+				"query": tags,
+				"fields": ["tags"]
+			}
 		}
 	}
-}
 
-res = es.search(index='tagz', doc_type='files', body=doc)
-lst = (res['hits'])['hits']
+	res = es.search(index='tagz', doc_type='files', body=doc)
+	lst = (res['hits'])['hits']
 
-for i in range(0, len(lst)):
-	print json.dumps( (lst[i])['_source'], sort_keys=True, indent=4, separators=(',', ': ') )
+	for i in range(0, len(lst)):
+		print json.dumps( (lst[i])['_source'], sort_keys=True, indent=4, separators=(',', ': ') )
 
