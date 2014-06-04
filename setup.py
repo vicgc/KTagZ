@@ -1,12 +1,12 @@
-from distutils.core import setup
+from setuptools import setup
 
 setup(
-	name = "Ghanta Singh",
+	name = "TagZ",
 	version = "0.1",
 	description = "A command line file-tagger for linux",
 	author = "Khirod Kant Naik",
 	author_email = "khirod234@gmail.com",
 	url = "kkantnaik.blogspot.in",
-	py_modules = ["tagz.py", "query_code.py"],
+	py_modules = ["client", "query"],
 	scripts = ["tagz"],
 )

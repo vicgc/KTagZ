@@ -4,6 +4,6 @@
 # Cheers ! :)
 #
 
-import client
+import client.client as cl
 
-client.main()
+cl.main()
