@@ -1,9 +1,0 @@
-#!/usr/bin/env python
-
-# This is just an invocation wrapper. Actual code is in tagz.py
-# Cheers ! :)
-#
-
-import client.client as cl
-
-cl.main()

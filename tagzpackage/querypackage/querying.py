@@ -21,10 +21,11 @@ def query(es):
 	for i in range(0, len(lst)):
 		ob = (lst[i])['_source']
 
-		print '*  File Name: ' + ob['file']
-		print '*  Description: ' + ob['description']
-		print '*  File Path: ' + ob['path']
+		print '*  File Name: ' + str(ob['file'])
+		print '*  Description: ' + str(ob['description'])
+		print '*  File Path: ' + str(ob['path'])
 		print '*  File Tags: ' + str(ob['tags'])
-
-		print '\n\n'		
+		
+		if i != len(lst)-1:
+			print '\n\n'		
 

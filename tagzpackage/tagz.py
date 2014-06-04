@@ -4,7 +4,7 @@ import argparse
 import os, json
 from elasticsearch import Elasticsearch
 import uuid
-from query import querying as qr
+from querypackage import querying as qr
 
 def main():
 	parser = argparse.ArgumentParser()
@@ -17,6 +17,11 @@ def main():
 
 	if args.filename:
 		name = args.filename
+
+		if os.path.isfile(name) == False:
+			print 'Needed a file'
+			return
+
 		tags = (raw_input("Tags [separated by a space]: ")).split(' ')
 		desc = (raw_input("Description [short description]: "))
 		path = os.getcwd() + '/' + args.filename
