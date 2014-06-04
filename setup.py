@@ -1,7 +1,7 @@
-from setuptools import setup
+from distutils.core import setup
 
 setup(
-	name = "TagZ",
+	name = "Ghanta Singh",
 	version = "0.1",
 	description = "A command line file-tagger for linux",
 	author = "Khirod Kant Naik",
