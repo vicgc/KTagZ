@@ -14,7 +14,17 @@ def query(es):
 
 	res = es.search(index='tagz', doc_type='files', body=doc)
 	lst = (res['hits'])['hits']
+	
+	if len(lst):
+		print 'Files containing the given tags are: \n=============================================='
 
 	for i in range(0, len(lst)):
-		print json.dumps( (lst[i])['_source'], sort_keys=True, indent=4, separators=(',', ': ') )
+		ob = (lst[i])['_source']
+
+		print '*  File Name: ' + ob['file']
+		print '*  Description: ' + ob['description']
+		print '*  File Path: ' + ob['path']
+		print '*  File Tags: ' + str(ob['tags'])
+
+		print '\n\n'		
 
