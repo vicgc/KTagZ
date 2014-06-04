@@ -4,6 +4,6 @@
 # Cheers ! :)
 #
 
-import tagz
+import client.client as cl
 
-tagz.main()
+cl.main()
