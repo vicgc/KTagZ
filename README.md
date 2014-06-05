@@ -4,8 +4,20 @@ TagZ
 A command line program for Linux that can add tags, description to a file and 
 allows you to perform a full text search on those tags to search for files.
 
+### Installlation
 
-### Examples
+1. Make sure you have installed ElasticSearch. See this link 
+
+http://www.elasticsearch.org/guide/en/elasticsearch/reference/current/setup.html#setup-installation
+
+2. Create a virtual environment to install tagz
+
+	virtualenv venv
+	source venv/bin/activate
+	pip install ktagz
+
+
+### Running Examples
 
 1. Getting Help
 
