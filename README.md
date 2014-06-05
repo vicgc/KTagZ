@@ -7,14 +7,13 @@ allows you to perform a full text search on those tags to search for files.
 ### Installlation
 
 1. Make sure you have installed ElasticSearch. See this link 
-
 http://www.elasticsearch.org/guide/en/elasticsearch/reference/current/setup.html#setup-installation
 
 2. Create a virtual environment to install tagz
 
-	virtualenv venv
-	source venv/bin/activate
-	pip install ktagz
+        virtualenv venv
+        source venv/bin/activate
+        pip install ktagz
 
 
 ### Running Examples
