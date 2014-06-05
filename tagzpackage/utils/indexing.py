@@ -20,7 +20,7 @@ def duplicate(es, idx, otype, doc):
 	lst = (res['hits'])['hits']
 
 	if len(lst):
-		return True
+		return (True, (lst[0])['_id'])
 
 	return False
 
@@ -37,7 +37,7 @@ def indexDoc(es, idx, otype, oid, doc):
 			resp = raw_input('This file is already indexed. Do you want to use the recent tags/description for this file. ? (y/n): ')
 
 			if resp == 'y':
-				res = es.index(index=idx, doc_type=otype, id=oid, body=doc)
+				res = es.index(index=idx, doc_type=otype, id=ret[1], body=doc)
 				print 'Okay!! Indexed'
 
 			else:

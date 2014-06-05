@@ -10,7 +10,7 @@ setup(
 	author = "Khirod Kant Naik",
 	author_email = "khirod234@gmail.com",
 	url='https://github.com/shinigamiryuk/TagZ',
-	scripts = ['bin/ktagz'],
+	scripts = ['bin/ktagz', 'bin/createIndex.sh'],
 	install_requires=[
 	"elasticsearch >= 1.0.0",
 	]

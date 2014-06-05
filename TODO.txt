@@ -1,0 +1,14 @@
+PUT /my_store 
+{
+    "mappings" : {
+        "products" : {
+            "properties" : {
+                "productID" : {
+                    "type" : "string",
+                    "index" : "not_analyzed" 
+                }
+            }
+        }
+    }
+
+}

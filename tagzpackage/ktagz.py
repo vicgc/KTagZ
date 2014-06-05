@@ -4,8 +4,8 @@ import argparse
 import os, json
 from elasticsearch import Elasticsearch
 import uuid
-from utils import querying as qr
-from utils import indexing as idx
+from utils.querying import query
+from utils.indexing import indexDoc
 
 def main():
 	parser = argparse.ArgumentParser()
@@ -35,11 +35,11 @@ def main():
 		}
 
 		unique_id = str(uuid.uuid4())
-		idx.indexDoc(es, 'tagz', 'files', unique_id, doc)
+		indexDoc(es, 'tagz', 'files', unique_id, doc)
 		#es.index(index='tagz', doc_type='files', id=unique_id, body=doc)
 
 	if args.search:
-		qr.query(es)
+		query(es)
 
 
 

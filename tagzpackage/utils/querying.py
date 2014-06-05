@@ -16,7 +16,7 @@ def query(es):
 	lst = (res['hits'])['hits']
 	
 	if len(lst):
-		print 'Files containing the given tags are: \n=============================================='
+		print '\nFiles containing the given tags are: \n--------------------------------------------\n'
 
 	for i in range(0, len(lst)):
 		ob = (lst[i])['_source']
@@ -27,5 +27,5 @@ def query(es):
 		print '*  File Tags: ' + str(ob['tags'])
 		
 		if i != len(lst)-1:
-			print '\n\n'		
+			print '\n'		
 
