@@ -4,6 +4,6 @@
 #	This is just an invocation script. :)
 #
 
-import tagzpackage.tagz as tg
+import tagzpackage.ktagz as tg
 
 tg.main()

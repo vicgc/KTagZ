@@ -1,4 +1,4 @@
-TagZ
+KTagZ
 -------------
 
 A command line program for Linux that can add tags, description to a file and 
@@ -9,7 +9,7 @@ allows you to perform a full text search on those tags to search for files.
 1. Make sure you have installed ElasticSearch. See this link 
 http://www.elasticsearch.org/guide/en/elasticsearch/reference/current/setup.html#setup-installation
 
-2. Create a virtual environment to install tagz
+2. Create a virtual environment to install ktagz
 
         virtualenv venv
         source venv/bin/activate
@@ -20,8 +20,8 @@ http://www.elasticsearch.org/guide/en/elasticsearch/reference/current/setup.html
 
 1. Getting Help
 
-        (venv)khirod@kurosaki:~/Documents/TagZ$ tagz -h
-        usage: tagz [-h] [-f FILENAME] [-s]
+        (venv)khirod@kurosaki:~/Documents/TagZ$ ktagz -h
+        usage: ktagz [-h] [-f FILENAME] [-s]
 
         optional arguments:
         -h, --help            show this help message and exit
@@ -31,14 +31,14 @@ http://www.elasticsearch.org/guide/en/elasticsearch/reference/current/setup.html
 
 2. Indexing a File
 
-        (venv)khirod@kurosaki:~/Documents/TagZ$ tagz -f LICENSE 
+        (venv)khirod@kurosaki:~/Documents/TagZ$ ktagz -f LICENSE 
         Tags [separated by a space]: license tagz
         Description [short description]: A GPL V3 license file
 
 
 3. Searching a File using tags
 
-        (venv)khirod@kurosaki:~/Documents/TagZ$ tagz -s
+        (venv)khirod@kurosaki:~/Documents/TagZ$ ktagz -s
         Enter tags to be searched [space separated]: license
         Files containing the given tags are: 
         ==============================================
