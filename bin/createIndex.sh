@@ -1,4 +1,4 @@
-curl -X DELETE "http://localhost:9200/tagz"
+curl -X DELETE "http://localhost:9200/tagz" 
 
 curl -X PUT "http://localhost:9200/tagz" -d '
 {
@@ -12,6 +12,9 @@ curl -X PUT "http://localhost:9200/tagz" -d '
             }
         }
     }
-
 }
 '
+
+echo "\n"
+echo "Index tagz for ElasticSearch created"
+echo "You may now proceed to index your files..."
