@@ -1,5 +1,7 @@
-import argparse
-import os, json
+import argparse, json
+
+from os.path import abspath
+from os.path import isfile
 from indexer import index
 from query import search
 
@@ -17,13 +19,18 @@ def main():
 	# if a file name is provided then index this file
 	if args.filename:
 		name = args.filename
-		if os.path.isfile(name) == False:
-			print 'Needed a file'
+		if isfile(name) == False:
+			print 'Please give a file to index. Not anything else !!'
 			return
 
-		tags = raw_input("Tags [separated by a space]: ")
-		desc = raw_input("Description [short description]: ")
-		path = os.getcwd() + '/' + args.filename
+		try:
+			path = abspath(name)
+			print 'Absolute Path: ', path
+			tags = raw_input("Tags [separated by a space]: ")
+			desc = raw_input("Description [short description]: ")
+		except KeyboardInterrupt:
+			print '\nGracefully Exiting...'
+			return
 
 		doc = {
 			"filename": name,
@@ -36,19 +43,34 @@ def main():
 
 	# if search on tags requested
 	if args.searchtags:
-		tags = raw_input('tags to be searched [space separated]: ')
+		try:
+			tags = raw_input('tags to be searched [space separated]: ')
+		except KeyboardInterrupt:
+			print '\nGracefully Exiting...'
+			return
+
 		search('tags:' + tags)
 
 
 	# if search on description requested
 	if args.searchdescription:
-		desc = raw_input('rough description of file: ')
+		try:
+			desc = raw_input('rough description of file: ')
+		except KeyboardInterrupt:
+			print '\nGracefully Exiting...'
+			return
+
 		search('description:' + desc)
 
 
 	# if search on name requested
 	if args.searchname:
-		name = raw_input('filename to be searched: ')
+		try:
+			name = raw_input('filename to be searched: ')
+		except KeyboardInterrupt:
+			print '\nGracefully Exiting...'
+			return
+
 		search('filename:' + name)
 
 

@@ -1,6 +1,7 @@
 import xapian
 import json
 from os.path import expanduser
+from os.path import isfile
 
 def printResults(listResults):
 	if len(listResults):
@@ -16,6 +17,14 @@ def printResults(listResults):
 		
 		if i != len(listResults)-1:
 			print '\n'
+
+
+def deleteUnused(deleteSet):
+	db_path = expanduser('~') + '/.ktagz_db'
+	db = xapian.WritableDatabase(db_path, xapian.DB_CREATE_OR_OPEN)
+
+	for id in deleteSet:
+		db.delete_document(id)
 
 
 def search(querystring):
@@ -45,11 +54,16 @@ def search(querystring):
 
 	# And print out something about the matches
 	matches = []
-	for match in enquire.get_mset(0, 100):
+	deleteSet = []
+	for match in enquire.get_mset(0, 10000):
 		fields = json.loads(match.document.get_data())
-		matches.append(fields)
+		if (isfile(fields['filepath'])):
+			matches.append(fields)
+		else:
+			deleteSet.append(match.docid)
 
 	printResults(matches)
+	deleteUnused(deleteSet)
 
 
 if __name__ == '__main__':
