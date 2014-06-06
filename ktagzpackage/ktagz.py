@@ -25,7 +25,6 @@ def main():
 
 		try:
 			path = abspath(name)
-			print 'Absolute Path: ', path
 			tags = raw_input("Tags [separated by a space]: ")
 			desc = raw_input("Description [short description]: ")
 		except KeyboardInterrupt:
