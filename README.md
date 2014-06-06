@@ -4,20 +4,21 @@ KTagZ
 A command line program for Linux that can add tags, description to a file and 
 allows you to perform a full text search on those tags to search for files.
 
+### Note
+
+This package is for demonstration purposes only. A full fledged package is yet to come. Please raise issues on github. And feel free to fork and contribute.
+
 ### Installlation
 
-1. Make sure you have installed ElasticSearch. See this link 
-http://www.elasticsearch.org/guide/en/elasticsearch/reference/current/setup.html#setup-installation
+1. You need xapian to run. So install using
+
+        sudo apt-get install python-xapian libxapian-dev
 
 2. Create a virtual environment to install ktagz
 
-        virtualenv venv
+        virtualenv --system-site-packages venv
         source venv/bin/activate
         pip install ktagz
-
-3. Create an elasticsearch index using
-	
-        createIndex.sh
 
 
 ### Running Examples
@@ -54,7 +55,7 @@ http://www.elasticsearch.org/guide/en/elasticsearch/reference/current/setup.html
         (venv)khirod@kurosaki:~/Documents/TagZ$ ktagz -st
         Enter tags to be searched [space separated]: license
 
-        Files containing the given tags are: 
+        Results are
         --------------------------------------
 
         *  File Name: LICENSE
@@ -77,7 +78,7 @@ http://www.elasticsearch.org/guide/en/elasticsearch/reference/current/setup.html
         (venv)khirod@kurosaki:~/Documents/TagZ$ ktagz -sd
         Rough description to be searched: license V2 file
 
-        Files containing the given tags are: 
+        Results are
         --------------------------------------
 
         *  File Name: LICENSE.txt
