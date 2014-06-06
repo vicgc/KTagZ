@@ -45,7 +45,7 @@ def search(querystring):
 
 	# And print out something about the matches
 	matches = []
-	for match in enquire.get_mset(0, 5):
+	for match in enquire.get_mset(0, 100):
 		fields = json.loads(match.document.get_data())
 		matches.append(fields)
 
