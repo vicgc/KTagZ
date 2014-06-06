@@ -4,6 +4,6 @@
 #	This is just an invocation script. :)
 #
 
-from testpackage import ktagz
+from ktagzpackage import ktagz
 
 ktagz.main()
