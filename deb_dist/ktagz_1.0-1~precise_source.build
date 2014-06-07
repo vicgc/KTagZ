@@ -1,0 +1,67 @@
+ dpkg-buildpackage -rfakeroot -d -us -uc -S -sa
+dpkg-buildpackage: export CFLAGS from dpkg-buildflags (origin: vendor): -g -O2 -fstack-protector --param=ssp-buffer-size=4 -Wformat -Wformat-security
+dpkg-buildpackage: export CPPFLAGS from dpkg-buildflags (origin: vendor): -D_FORTIFY_SOURCE=2
+dpkg-buildpackage: export CXXFLAGS from dpkg-buildflags (origin: vendor): -g -O2 -fstack-protector --param=ssp-buffer-size=4 -Wformat -Wformat-security
+dpkg-buildpackage: export FFLAGS from dpkg-buildflags (origin: vendor): -g -O2
+dpkg-buildpackage: export LDFLAGS from dpkg-buildflags (origin: vendor): -Wl,-Bsymbolic-functions -Wl,-z,relro
+parsechangelog/debian: warning:     debian/changelog(l3): unrecognised line
+LINE:  * source package automatically created by stdeb 0.6.0+git
+parsechangelog/debian: warning:     debian/changelog(l5): found trailer where expected start of change data
+LINE:  -- Khirod Kant Naik (Undergrad from IIITA) <khirod234@gmail.com>  Sat, 07 Jun 2014 08:26:50 +0530
+dpkg-buildpackage: source package ktagz
+dpkg-buildpackage: source version 1.0-1~precise
+dpkg-buildpackage: source changed by Khirod Kant Naik (Undergrad from IIITA) <khirod234@gmail.com>
+ dpkg-source --before-build ktagz-1.0
+parsechangelog/debian: warning: ktagz-1.0/debian/changelog(l3): unrecognised line
+LINE:  * source package automatically created by stdeb 0.6.0+git
+parsechangelog/debian: warning: ktagz-1.0/debian/changelog(l5): found trailer where expected start of change data
+LINE:  -- Khirod Kant Naik (Undergrad from IIITA) <khirod234@gmail.com>  Sat, 07 Jun 2014 08:26:50 +0530
+ fakeroot debian/rules clean
+dh clean --with python2
+   dh_testdir
+   dh_auto_clean
+running clean
+'build/lib.linux-x86_64-2.7' does not exist -- can't clean it
+'build/bdist.linux-x86_64' does not exist -- can't clean it
+'build/scripts-2.7' does not exist -- can't clean it
+   dh_clean
+ dpkg-source -b ktagz-1.0
+parsechangelog/debian: warning: ktagz-1.0/debian/changelog(l3): unrecognised line
+LINE:  * source package automatically created by stdeb 0.6.0+git
+parsechangelog/debian: warning: ktagz-1.0/debian/changelog(l5): found trailer where expected start of change data
+LINE:  -- Khirod Kant Naik (Undergrad from IIITA) <khirod234@gmail.com>  Sat, 07 Jun 2014 08:26:50 +0530
+dpkg-source: info: using source format `3.0 (quilt)'
+dpkg-source: info: building ktagz using existing ./ktagz_1.0.orig.tar.gz
+parsechangelog/debian: warning: ktagz-1.0/debian/changelog(l3): unrecognised line
+LINE:  * source package automatically created by stdeb 0.6.0+git
+parsechangelog/debian: warning: ktagz-1.0/debian/changelog(l5): found trailer where expected start of change data
+LINE:  -- Khirod Kant Naik (Undergrad from IIITA) <khirod234@gmail.com>  Sat, 07 Jun 2014 08:26:50 +0530
+dpkg-source: info: building ktagz in ktagz_1.0-1~precise.debian.tar.gz
+dpkg-source: info: building ktagz in ktagz_1.0-1~precise.dsc
+ dpkg-genchanges -S -sa >../ktagz_1.0-1~precise_source.changes
+parsechangelog/debian: warning:     debian/changelog(l3): unrecognised line
+LINE:  * source package automatically created by stdeb 0.6.0+git
+parsechangelog/debian: warning:     debian/changelog(l5): found trailer where expected start of change data
+LINE:  -- Khirod Kant Naik (Undergrad from IIITA) <khirod234@gmail.com>  Sat, 07 Jun 2014 08:26:50 +0530
+parsechangelog/debian: warning:     debian/changelog(l3): unrecognised line
+LINE:  * source package automatically created by stdeb 0.6.0+git
+parsechangelog/debian: warning:     debian/changelog(l5): found trailer where expected start of change data
+LINE:  -- Khirod Kant Naik (Undergrad from IIITA) <khirod234@gmail.com>  Sat, 07 Jun 2014 08:26:50 +0530
+dpkg-genchanges: including full source code in upload
+ dpkg-source --after-build ktagz-1.0
+parsechangelog/debian: warning: ktagz-1.0/debian/changelog(l3): unrecognised line
+LINE:  * source package automatically created by stdeb 0.6.0+git
+parsechangelog/debian: warning: ktagz-1.0/debian/changelog(l5): found trailer where expected start of change data
+LINE:  -- Khirod Kant Naik (Undergrad from IIITA) <khirod234@gmail.com>  Sat, 07 Jun 2014 08:26:50 +0530
+dpkg-buildpackage: full upload (original source is included)
+Now running lintian...
+Use of uninitialized value within @lines in concatenation (.) or string at /usr/share/lintian/checks/source-copyright line 205.
+W: ktagz source: missing-license-paragraph-in-dep5-copyright gpl-v3 (paragraph at line )
+W: ktagz source: out-of-date-standards-version 3.9.1 (current is 3.9.3)
+Finished running lintian.
+Now signing changes and any dsc files...
+ signfile ktagz_1.0-1~precise.dsc Khirod Kant Naik (Undergrad from IIITA) <khirod234@gmail.com>
+
+ signfile ktagz_1.0-1~precise_source.changes Khirod Kant Naik (Undergrad from IIITA) <khirod234@gmail.com>
+
+Successfully signed dsc and changes files

@@ -1,0 +1,39 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+Format: 1.8
+Date: Sat, 07 Jun 2014 08:26:50 +0530
+Source: ktagz
+Binary: ktagz
+Architecture: source
+Version: 1.0-1~precise
+Distribution: precise
+Urgency: low
+Maintainer: Khirod Kant Naik (Undergrad from IIITA) <khirod234@gmail.com>
+Changed-By: Khirod Kant Naik (Undergrad from IIITA) <khirod234@gmail.com>
+Description: 
+ ktagz      - A command line file-tagger/file-search tool for linux
+Changes: 
+ ktagz (1.0-1~precise) precise; urgency=low
+Checksums-Sha1: 
+ d06bd7e05305677f026d16db22ebaa49ab0c470a 1183 ktagz_1.0-1~precise.dsc
+ 66e6e7f3c22aea0905f742c412500cb9e83c8c97 121941 ktagz_1.0.orig.tar.gz
+ d3f0a265920a478c1e9f79110bfe077a751792f7 1229 ktagz_1.0-1~precise.debian.tar.gz
+Checksums-Sha256: 
+ 9f3c9398c7da63efca4417b1667449a6b33c03a6e64cb706f4c880c03f576ecc 1183 ktagz_1.0-1~precise.dsc
+ 5b4568d02d6cea28f02ee357e76c282ea94ce495e5c87fff8b55faf239950f4e 121941 ktagz_1.0.orig.tar.gz
+ 104df76e6359bb48a76746002bf6cf007071c08d7902cbd553091019e224ae47 1229 ktagz_1.0-1~precise.debian.tar.gz
+Files: 
+ b4dfb634334e93154c457e762b823ab1 1183 python optional ktagz_1.0-1~precise.dsc
+ 110d85281c0aa463692ce2fcb46f54bd 121941 python optional ktagz_1.0.orig.tar.gz
+ 1f2bbffa387b3aeb92d7bb517173defd 1229 python optional ktagz_1.0-1~precise.debian.tar.gz
+
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.11 (GNU/Linux)
+
+iJwEAQECAAYFAlOSmawACgkQHe45xQ+c6wYzmAQAsjQt0jJ2DBHa1YrK3QSVQhzO
+h+q7avhEinlbqQOEXpgaQe/NBpVWCExPt8hNgUJfwmwVPF+arcYGxT341S4tV3qr
+MmrvkmWdMjamglXlOi8IXeuM4UeECwq0WnqhEhBOlHjxp3+q2DZCnu7TFYFCFQYR
+ekK0nfYCOayKw1GMgHs=
+=FRaI
+-----END PGP SIGNATURE-----
