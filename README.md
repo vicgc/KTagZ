@@ -8,18 +8,27 @@ allows you to perform a full text search on those tags to search for files.
 
 This package is for demonstration purposes only. A full fledged package is yet to come. Please raise issues on github. And feel free to fork and contribute.
 
-### Installlation
+### Installation
 
 1. You need xapian to run. So install using
 
         sudo apt-get install python-xapian libxapian-dev
 
-2. Create a virtual environment to install ktagz
+2. Install via ppa (Precise, Saucy, Trusty)
 
+        sudo add-apt-repository ppa:kkantnaik/ppa
+        sudo apt-get update
+        sudo apt-get install ktagz
+        
+   OR
+
+   Install in a virtual environment
+   
         virtualenv --system-site-packages venv
         source venv/bin/activate
         pip install ktagz
-
+        
+   
 
 ### Running Examples
 
