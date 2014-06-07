@@ -59,7 +59,14 @@ This package is for demonstration purposes only. A full fledged package is yet t
         Description [short description]: A GPL V2 license file
 
 
-3. Searching a File using tags
+3. Index a directory recursively
+
+        (venv)khirod@kurosaki:~/Documents/KTagZ$ ktagz -d tagzpackage/
+        Tags [separated by a space]: module tagz main_module
+        Description [short description]: Tagz module that contains all the python files.
+
+
+4. Searching a File using tags
 
         (venv)khirod@kurosaki:~/Documents/TagZ$ ktagz -st
         Enter tags to be searched [space separated]: license
@@ -82,7 +89,7 @@ This package is for demonstration purposes only. A full fledged package is yet t
         LICENSE.txt also had 'ktagz' as a tag hence it got a lower score and appeared lower.
 
 
-4. Search a File using description
+5. Search a File using description
 
         (venv)khirod@kurosaki:~/Documents/TagZ$ ktagz -sd
         Rough description to be searched: license V2 file
@@ -102,3 +109,4 @@ This package is for demonstration purposes only. A full fledged package is yet t
 
         Here LICENSE.txt appears as top result because the description only LICENSE.txt had all the three words we mentioned 
         in description while LICENSE had only two.
+
